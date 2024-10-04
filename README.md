@@ -11,7 +11,8 @@ Gồm các bộ phận: file thiết kế, testbench, code python dùng để t�
 
 File mmu.v
 
-Sơ đồ thiết kế: https://docs.google.com/presentation/d/1WV2lelt7a6oAOMkrWYnCnxCloGz66vAD/edit#slide=id.g2dd98016deb_0_6
+Sơ đồ thiết kế: ![image](https://github.com/user-attachments/assets/6cdc1b2d-0486-4913-aa35-cfba039b2435)
+
 
 Gồm 5x5 bộ nhân và nhiều bộ cộng song song
 
@@ -68,4 +69,11 @@ Folder float2fixed
 - ramdomConv2D.py: tạo một lớp Conv2D theo cấu hình cài đặt sẵn với các giá trị input là số float ngẫu nhiên
 - cleantxt.py: bỏ các phần thừa trong file txt chứa dữ liệu
 - float2fixed: chuyển các file chứa số float thành binary theo định dạng fixedpoint (32,16)
+
+  ## Kết quả
+
+  Kết quả waveform từ testbench so sánh trực tiếp với kết quả tính convolution bằng python
+
+  ![image](https://github.com/user-attachments/assets/cdf4148f-4dc4-42d8-9f72-5d5bead7bf2f)
+
 
