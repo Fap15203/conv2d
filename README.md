@@ -72,8 +72,17 @@ Folder float2fixed
 
   ## Kết quả
 
-  Kết quả waveform từ testbench so sánh trực tiếp với kết quả tính convolution bằng python
+  Kết quả waveform từ testbench so sánh trực tiếp với kết quả tính convolution bằng python. Dưới đây là một phần ví dụ
 
   ![image](https://github.com/user-attachments/assets/cdf4148f-4dc4-42d8-9f72-5d5bead7bf2f)
-
+```
+-517.272194
+-1026.721818
+-287.333909
+-373.797302
+-581.762715
+-874.153531
+-479.769201
+-66.438918
+```
 
