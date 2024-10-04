@@ -2,7 +2,7 @@
 
 module conv_tb;
 
-    parameter OUT_CHANNEL   = 6;
+    parameter NUM_FILTER    = 6;
     parameter OUT_ROW       = 28;
     parameter OUT_COL       = 28;
 
@@ -93,7 +93,7 @@ module conv_tb;
     integer n = 0, x = 0, y = 0;
     
     always begin
-        for (n = 0; n < OUT_CHANNEL; n = n+1) begin
+	    for (n = 0; n < NUM_FILTER; n = n+1) begin
             weight0 <= weightArray[25*n+0];
             weight1 <= weightArray[25*n+1];
             weight2 <= weightArray[25*n+2];
