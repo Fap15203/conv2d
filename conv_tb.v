@@ -5,8 +5,6 @@ module conv_tb;
     parameter OUT_CHANNEL   = 6;
     parameter OUT_ROW       = 28;
     parameter OUT_COL       = 28;
-    parameter FMAP_ROW      = 5;
-    parameter FMAP_COL      = 5;
 
     reg clk;
     reg [31:0] imageArray [0:1023];									
