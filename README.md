@@ -17,6 +17,14 @@ Gồm 5x5 bộ nhân và nhiều bộ cộng song song
 
 Các bộ nhân và cộng đang sử dụng data dạng fixed point 32 bit, lấy tại bit 16
 
+### Testbench
+
+File conv_tb.v
+
+Chịu trách nhiệm nạp dữ liệu vào theo đúng thứ tự để nhân ma trận
+
+Sử dụng các file .mem chứa các dữ liệu số fixed point để nạp vào bộ nhân, các file này được tạo bởi python
+
 ```
 for (n = 0; n < NUM_FILTER; n = n+1) begin
             weight0 <= weightArray[25*n+0];
@@ -51,17 +59,13 @@ Giải thích ý nghĩa của cụm: imageArray[((x+OFFSET) * INPUT_SIZE) + y + 
 2. INPUT_SIZE là kích thước của đầu vào, ở đây kích thước input là 32*32 vì vậy INPUT_SIZE = 32
 3. OFFSET là tương quan vị trí của điểm pixel cần nạp so với vị trí x hoặc y đang xét
 
-### Testbench
-
-File conv_tb.v
-
-Chịu trách nhiệm nạp dữ liệu vào theo đúng thứ tự để nhân ma trận
-
-Sử dụng các file .mem chứa các dữ liệu số fixed point để nạp vào bộ nhân, các file này được tạo bởi python
-
 ### Python
 
 Folder float2fixed
 
 Được tạo hoàn toàn bởi ChatGPT, mục đích là nhanh chóng tạo các file input output có các giá trị ngẫu nhiên để kiểm tra kết quả từ thiết kế
+
+- ramdomConv2D.py: tạo một lớp Conv2D theo cấu hình cài đặt sẵn với các giá trị input là số float ngẫu nhiên
+- cleantxt.py: bỏ các phần thừa trong file txt chứa dữ liệu
+- float2fixed: chuyển các file chứa số float thành binary theo định dạng fixedpoint (32,16)
 
